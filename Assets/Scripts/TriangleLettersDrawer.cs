@@ -1,7 +1,4 @@
 ﻿using UnityEngine;
-using System.Linq;
-using System.Collections;
-using System.Diagnostics;
 
 public class TriangleLettersDrawer : MonoBehaviour
 {
@@ -10,8 +7,8 @@ public class TriangleLettersDrawer : MonoBehaviour
     public TextMesh angleLetter;
     public float offsetSideLetter = 0;
 
-    readonly static string[] sideLetters = new[] { "a", "b", "c" };
-    readonly static string[] angleLetters = new[] { "γ", "β", "α" };
+    readonly static string[] sideLetters = new[] { "b", "c", "a" };
+    readonly static string[] angleLetters = new[] { "γ", "α", "β" };
 
     private LineRenderer lineRenderer;
     TextMesh[] sideLettersMesh;
@@ -72,7 +69,7 @@ public class TriangleLettersDrawer : MonoBehaviour
             sidesLength[a] = Vector3.Distance(positions[a], positions[b]);
             angles[a] = Vector3.Angle(ab, positions[c] - positions[a]);
         }
-
+        
         // bisector http://tutata.ru/217
         for (int a = 0, b = 1, c = 2; a < len; a++, b++, c++)
         {

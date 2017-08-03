@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class NextLevelInputValidatorListener : MonoBehaviour
 {
@@ -7,9 +6,7 @@ public class NextLevelInputValidatorListener : MonoBehaviour
     {
         InputValidator.AllTextAreValid += fieldCount =>
         {
-            int buildIndex = SceneManager.GetActiveScene().buildIndex;
-            print(buildIndex);
-            SceneManager.LoadScene(buildIndex+1);
+            LevelJumper.NextLevel();
         };
     }
 }
