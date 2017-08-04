@@ -27,6 +27,7 @@ public class InputValidator : MonoBehaviour
 
     public void OnEditChanged()
     {
+        //print(textUI.text + (textUI.text == expected ? " == " : " != ") + expected);
         var isValidForNow = textUI.text == expected;
         if (isValidForNow == isValid) return; // no changes
 
