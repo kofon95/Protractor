@@ -16,14 +16,14 @@ public class InputUpdater : MonoBehaviour {
 
             a.text = sideA.ToString("0.##");
             c.text = sideC.ToString("0.##");
-            alpha.text = drawer.GetAngle(1).ToString("0.#");
+            alpha.text = drawer.GetAngle(1).ToString("0.#") + "°";
             sin.text = (sideA / sideC).ToString("0.##");
         }
         else
         {
             a.text = "-";
             c.text = "-";
-            alpha.text = "90";
+            alpha.text = "90°";
             sin.text = "1";
         }
 	}
